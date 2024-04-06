@@ -69,11 +69,11 @@ function Content({ selectedNavigation }) {
                 {selectedNavigation === 'movies' ?
                     <>
                         <p className="py-2 text-xl text-[#E6EEF9]">Dramas & Series</p>
-                        <div class="flex flex-wrap -mx-2">
+                        <div className="flex flex-wrap -mx-2">
                             {contentList.map((item, index) => (
-                                <div className="sm:w-1/2 md:w-1/4 px-1 mb-4 cursor-pointer rounded-md" onClick={() => setSelectedContent(item.id)}>
+                                <div key={item.id} className="sm:w-1/2 md:w-1/4 px-1 mb-4 cursor-pointer rounded-md" onClick={() => setSelectedContent(item.id)}>
                                     <div className="">
-                                        <img src={item.image} alt="Image" className={`object-cover block w-full h-auto rounded-md ${item.id === selectedContent ? "border-4 border-[#FF3988]" : "border-4 border-transparent"} border-4 border-transparent hover:border-4 hover:border-[#FF398880]`} />
+                                        <img src={item.image} alt="" className={`object-cover block w-full h-auto rounded-md ${item.id === selectedContent ? "border-4 border-[#FF3988]" : "border-4 border-transparent"} border-4 border-transparent hover:border-4 hover:border-[#FF398880]`} />
                                     </div>
                                 </div>
                             ))}

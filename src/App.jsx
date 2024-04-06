@@ -6,7 +6,6 @@ function App() {
   const [selectedNavigation, setSelectedNavigation] = useState('movies');
   function onNavigationChange(changedNavigation) {
     setSelectedNavigation(prevState => changedNavigation);
-    console.log(selectedNavigation)
   }
   return (
     <div className="">

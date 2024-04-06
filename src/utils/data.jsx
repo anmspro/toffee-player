@@ -1,6 +1,3 @@
-import tv_icon from "../assets/images/icons/live_tv.svg"
-import movie_icon from "../assets/images/icons/movie.svg"
-import info_icon from "../assets/images/icons/info.svg"
 import LiveTvIcon from "../assets/images/icons/LiveTvIcon"
 import MovieIcon from "../assets/images/icons/MovieIcon"
 import InfoIcon from "../assets/images/icons/InfoIcon"
