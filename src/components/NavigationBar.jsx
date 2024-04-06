@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { navigationItems } from "../utils/data"
 
 function NavigationBar({ onNavigationChange }) {
-    const [selectedItem, setSelectedItem] = useState(null);
+    const [selectedItem, setSelectedItem] = useState(1);
     const handleItemClick = (itemName, index) => {
         setSelectedItem(index);
         onNavigationChange(itemName);
