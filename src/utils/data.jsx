@@ -1,6 +1,9 @@
 import tv_icon from "../assets/images/icons/live_tv.svg"
 import movie_icon from "../assets/images/icons/movie.svg"
 import info_icon from "../assets/images/icons/info.svg"
+import LiveTvIcon from "../assets/images/icons/LiveTvIcon"
+import MovieIcon from "../assets/images/icons/MovieIcon"
+import InfoIcon from "../assets/images/icons/InfoIcon"
 import image1 from "../assets/images/contents/1.png"
 import image2 from "../assets/images/contents/2.png"
 import image3 from "../assets/images/contents/3.png"
@@ -21,18 +24,21 @@ import image16 from "../assets/images/contents/16.png"
 export const navigationItems = [
     {
         id: "1",
-        name: "Live TV",
-        icon: tv_icon,
+        name: "live_tv",
+        display_name: "Live TV",
+        icon: LiveTvIcon,
     },
     {
         id: "2",
-        name: "Movies",
-        icon: movie_icon,
+        name: "movies",
+        display_name: "Movies",
+        icon: MovieIcon,
     },
     {
         id: "3",
-        name: "Info",
-        icon: info_icon,
+        name: "info",
+        display_name: "Info",
+        icon: InfoIcon,
     },
 ];
 
