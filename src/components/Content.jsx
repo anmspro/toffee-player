@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import toffee_logo from "../assets/images/icons/toffee.png";
 import { contentList } from "../utils/data";
-import Player from './Player';
 import ComingSoon from "./ComingSoon";
 
 function Content({ selectedNavigation, handleShowPlayer }) {
