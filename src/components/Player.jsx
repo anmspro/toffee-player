@@ -3,26 +3,7 @@ import ShakaPlayer from 'shaka-player-react';
 import 'shaka-player/dist/controls.css';
 
 function Player({ source }) {
-    // const videoRef = useRef(null);
-
-    // useEffect(() => {
-    //     async function loadAsset() {
-    //         const videoElement = videoRef.current.video;
-    //         if (!videoElement) return;
-
-    //         videoElement.src = source;
-
-    //         try {
-    //             await videoElement.play();
-    //         } catch (error) {
-    //             console.error("Failed to play video:", error);
-    //         }
-    //     }
-
-    //     loadAsset();
-    // }, [source]);
-
-    return <ShakaPlayer autoplay src={source} />;
+    return <ShakaPlayer className="h-[500px]" fullscreen="true" autoplay="true" src={source} />;
 }
 
 export default Player;

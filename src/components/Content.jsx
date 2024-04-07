@@ -8,7 +8,7 @@ function Content({ selectedNavigation }) {
     const [showPlayer, setShowPlayer] = useState(false);
 
     useEffect(() => {
-        function handleKeyDown(event) {
+        const handleKeyDown = (event) => {
             if (!showPlayer) {
                 switch (event.key) {
                     case "ArrowUp":
@@ -33,10 +33,9 @@ function Content({ selectedNavigation }) {
             if (event.key === "Escape") setShowPlayer(false);
         }
 
-        function handleMouseWheel(event) {
+        const handleMouseWheel = (event) => {
             if (!showPlayer) {
                 const deltaY = event.deltaY;
-
                 if (deltaY > 0) {
                     navigateContent(4);
                 } else if (deltaY < 0) {
@@ -54,7 +53,7 @@ function Content({ selectedNavigation }) {
         };
     }, [selectedContent, showPlayer]);
 
-    function navigateContent(direction) {
+    const navigateContent = (direction) => {
         const currentIndex = contentList.findIndex(item => item.id === selectedContent);
         if (currentIndex !== -1) {
             let newIndex = currentIndex + direction;
@@ -69,10 +68,10 @@ function Content({ selectedNavigation }) {
         }
     }
 
-    function handleContentClick(id) {
+    const handleContentClick = (id) => {
         setSelectedContent(id);
         setShowPlayer(true);
-    }
+    };
 
     return (
         <div className="pl-12">
@@ -87,16 +86,34 @@ function Content({ selectedNavigation }) {
                                 <p className="py-2 text-xl text-[#E6EEF9]">Dramas & Series</p>
                                 <div className="flex flex-wrap -mx-2">
                                     {contentList.map((item, index) => (
-                                        <div key={item.id} className="sm:w-1/2 md:w-1/4 px-1 mb-4 cursor-pointer rounded-md" onClick={() => handleContentClick(item.id)}>
+                                        <div
+                                            key={item.id}
+                                            className="sm:w-1/2 md:w-1/4 px-1 mb-2 cursor-pointer rounded-md"
+                                            onClick={() => handleContentClick(item.id)}>
                                             <div className="">
-                                                <img src={item.image} alt="" className={`object-cover block w-full h-auto rounded-md ${item.id === selectedContent ? "border-4 border-[#FF3988]" : "border-4 border-transparent"} border-4 border-transparent hover:border-4 hover:border-[#FF398880]`} />
+                                                <img
+                                                    src={item.image}
+                                                    alt=""
+                                                    className={`object-cover block w-full h-auto rounded-md ${item.id === selectedContent ? "border-4 border-[#FF3988]" : "border-4 border-transparent"} hover:border-4 hover:border-[#FF398880]`} />
                                             </div>
                                         </div>
                                     ))}
                                 </div>
                             </>
                         ) : (
-                            <p>Live tv & Info page</p>
+                            <>
+                                <p className="py-2 text-xl text-[#E6EEF9]">
+                                    {selectedNavigation === 'live_tv' ? 'Live TV' : 'Info'}
+                                </p>
+                                <div className="pt-14">
+                                    <div className="flex items-center justify-center">
+                                        <div className="mr-3 pb-10">
+                                            <div className="w-14 h-14 border-t-4 border-[#c44168] rounded-full animate-spin"></div>
+                                        </div>
+                                    </div>
+                                    <div className="mb-5 flex items-center justify-center text-xl text-[#c44168]">{selectedNavigation === 'live_tv' ? 'Live TV' : 'Info'} is coming soon..</div>
+                                </div>
+                            </>
                         )}
                     </>
                 )}

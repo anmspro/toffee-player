@@ -4,12 +4,14 @@ import { useState } from "react";
 
 function App() {
   const [selectedNavigation, setSelectedNavigation] = useState('movies');
-  function onNavigationChange(changedNavigation) {
-    setSelectedNavigation(prevState => changedNavigation);
-  }
+
+  const handleNavigationChange = (changedNavigation) => {
+    setSelectedNavigation(changedNavigation);
+  };
+
   return (
-    <div className="">
-      <NavigationBar onNavigationChange={onNavigationChange} />
+    <div>
+      <NavigationBar onNavigationChange={handleNavigationChange} />
       <Content selectedNavigation={selectedNavigation} />
     </div>
   );
