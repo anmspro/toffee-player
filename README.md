@@ -50,6 +50,9 @@ The following tools were used in the construction of the project:
  <br />
  <sub><b>Abu Noman Md Sakib</b></sub></a> <a href="https://github.com/anmspro" title="Github">🚀</a>
 
+## 📸 Screenshots
+
+<br />
 Content:
 <br />
 ![content_page](src/assets/images/screenshots/content_page.png)
