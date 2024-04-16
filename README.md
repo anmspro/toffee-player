@@ -53,6 +53,7 @@ The following tools were used in the construction of the project:
 ## 📸 Screenshots
 
 <br />
+
 Content:
 <br />
 ![content_page](src/assets/images/screenshots/content_page.png)
